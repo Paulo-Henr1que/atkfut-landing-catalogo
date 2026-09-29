@@ -5,43 +5,50 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ATKFUT — Catálogo de camisas de time no atacado</title>
 <meta name="description" content="Catálogo de camisas de time no atacado pelo app ATKFUT. Pedido mínimo de 5 peças, você escolhe os times e modelos e define seu preço de revenda.">
-<meta name="theme-color" content="#faf7f1">
+<meta name="theme-color" content="#f6f5f0">
 <meta property="og:title" content="ATKFUT — Catálogo de camisas de time no atacado">
 <meta property="og:description" content="Pedido mínimo de 5 peças. Escolha, compre e pague pelo app.">
 <meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%231f4d3d'/%3E%3Cpath d='M30 22 L42 18 Q50 26 58 18 L70 22 L86 36 L78 48 L70 44 L70 84 L30 84 L30 44 L22 48 L14 36 Z' fill='%23faf7f1'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23134e3a'/%3E%3Cpath d='M30 22 L42 18 Q50 26 58 18 L70 22 L86 36 L78 48 L70 44 L70 84 L30 84 L30 44 L22 48 L14 36 Z' fill='%23d4f36a'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- camisa genérica, sem escudo nem marca -->
+<!-- sprites: camisas genéricas (sem escudo/marca) + ícones -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
     <clipPath id="shirt-clip"><path d="M30 10 L42 6 Q50 14 58 6 L70 10 L90 26 L81 40 L72 35 L72 92 L28 92 L28 35 L19 40 L10 26 Z"/></clipPath>
     <symbol id="shirt-h" viewBox="0 0 100 100">
-      <path d="M30 10 L42 6 Q50 14 58 6 L70 10 L90 26 L81 40 L72 35 L72 92 L28 92 L28 35 L19 40 L10 26 Z" style="fill:var(--base)"/>
-      <g clip-path="url(#shirt-clip)" style="fill:var(--stripe)">
+      <path d="M30 10 L42 6 Q50 14 58 6 L70 10 L90 26 L81 40 L72 35 L72 92 L28 92 L28 35 L19 40 L10 26 Z" style="fill:var(--base);stroke:none"/>
+      <g clip-path="url(#shirt-clip)" style="fill:var(--stripe);stroke:none">
         <rect x="0" y="30" width="100" height="10"/><rect x="0" y="52" width="100" height="10"/><rect x="0" y="74" width="100" height="10"/>
       </g>
-      <path d="M42 6 Q50 14 58 6" fill="none" stroke="rgba(0,0,0,.3)" stroke-width="2"/>
+      <path d="M42 6 Q50 14 58 6" style="fill:none;stroke:rgba(0,0,0,.3);stroke-width:2"/>
     </symbol>
     <symbol id="shirt-v" viewBox="0 0 100 100">
-      <path d="M30 10 L42 6 Q50 14 58 6 L70 10 L90 26 L81 40 L72 35 L72 92 L28 92 L28 35 L19 40 L10 26 Z" style="fill:var(--base)"/>
-      <g clip-path="url(#shirt-clip)" style="fill:var(--stripe)">
+      <path d="M30 10 L42 6 Q50 14 58 6 L70 10 L90 26 L81 40 L72 35 L72 92 L28 92 L28 35 L19 40 L10 26 Z" style="fill:var(--base);stroke:none"/>
+      <g clip-path="url(#shirt-clip)" style="fill:var(--stripe);stroke:none">
         <rect x="31" y="0" width="7" height="100"/><rect x="46" y="0" width="7" height="100"/><rect x="61" y="0" width="7" height="100"/>
       </g>
-      <path d="M42 6 Q50 14 58 6" fill="none" stroke="rgba(0,0,0,.3)" stroke-width="2"/>
+      <path d="M42 6 Q50 14 58 6" style="fill:none;stroke:rgba(0,0,0,.3);stroke-width:2"/>
     </symbol>
     <symbol id="shirt-band" viewBox="0 0 100 100">
-      <path d="M30 10 L42 6 Q50 14 58 6 L70 10 L90 26 L81 40 L72 35 L72 92 L28 92 L28 35 L19 40 L10 26 Z" style="fill:var(--base)"/>
-      <g clip-path="url(#shirt-clip)" style="fill:var(--stripe)">
+      <path d="M30 10 L42 6 Q50 14 58 6 L70 10 L90 26 L81 40 L72 35 L72 92 L28 92 L28 35 L19 40 L10 26 Z" style="fill:var(--base);stroke:none"/>
+      <g clip-path="url(#shirt-clip)" style="fill:var(--stripe);stroke:none">
         <polygon points="0,20 100,55 100,68 0,33"/>
       </g>
-      <path d="M42 6 Q50 14 58 6" fill="none" stroke="rgba(0,0,0,.3)" stroke-width="2"/>
+      <path d="M42 6 Q50 14 58 6" style="fill:none;stroke:rgba(0,0,0,.3);stroke-width:2"/>
     </symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></symbol>
+    <symbol id="i-tag" viewBox="0 0 24 24"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8Z"/><circle cx="7.5" cy="7.5" r="1.5"/></symbol>
+    <symbol id="i-box" viewBox="0 0 24 24"><path d="M21 8 12 3 3 8v8l9 5 9-5V8Z"/><path d="M3 8l9 5 9-5M12 13v8"/></symbol>
+    <symbol id="i-offer" viewBox="0 0 24 24"><path d="M19 5 5 19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></symbol>
+    <symbol id="i-card" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></symbol>
   </defs>
 </svg>
 
@@ -66,22 +73,36 @@
     <div class="wrap hero-grid">
       <div class="hero-copy">
         <p class="eyebrow">Catálogo atacadista · app ATKFUT</p>
-        <h1>Monte seu estoque de camisas com <em>5 peças</em>, não com um lote fechado.</h1>
+        <h1>Monte seu estoque de camisas com <mark>5&nbsp;peças</mark>, não com um lote fechado.</h1>
         <p class="lead">No app ATKFUT você escolhe os times e modelos, compra direto do fornecedor e paga pelo celular. Depois é com você: revende no seu canal, pelo preço que definir.</p>
         <div class="store-buttons">
           <a class="store-btn" href="https://apps.apple.com/br/app/atkfut/id6754094628" target="_blank" rel="noopener">
-            <span class="store-kicker">Baixar na</span><span class="store-name">App Store</span>
+            <svg class="ic" aria-hidden="true"><use href="#i-download"/></svg>
+            <span><span class="store-kicker">Baixar na</span><span class="store-name">App Store</span></span>
           </a>
-          <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.foxappy.atkfut" target="_blank" rel="noopener">
-            <span class="store-kicker">Disponível no</span><span class="store-name">Google Play</span>
+          <a class="store-btn store-btn-ghost" href="https://play.google.com/store/apps/details?id=com.foxappy.atkfut" target="_blank" rel="noopener">
+            <svg class="ic" aria-hidden="true"><use href="#i-download"/></svg>
+            <span><span class="store-kicker">Disponível no</span><span class="store-name">Google Play</span></span>
           </a>
         </div>
       </div>
 
       <figure class="hero-art" aria-hidden="true">
-        <div class="art-card art-1"><svg style="--base:#c8323c;--stripe:#1c1b1f"><use href="#shirt-h"/></svg></div>
-        <div class="art-card art-2"><svg style="--base:#f4f1ea;--stripe:#1f4d3d"><use href="#shirt-band"/></svg></div>
-        <div class="art-card art-3"><svg style="--base:#1b2a52;--stripe:#e9e4d8"><use href="#shirt-v"/></svg></div>
+        <div class="art-pitch">
+          <svg viewBox="0 0 400 360" preserveAspectRatio="none">
+            <g fill="none" stroke="rgba(255,255,255,.55)" stroke-width="2">
+              <rect x="16" y="16" width="368" height="328" rx="6"/>
+              <line x1="16" y1="180" x2="384" y2="180"/>
+              <circle cx="200" cy="180" r="48"/>
+              <rect x="120" y="16" width="160" height="56"/>
+              <rect x="120" y="288" width="160" height="56"/>
+            </g>
+            <circle cx="200" cy="180" r="3.5" fill="rgba(255,255,255,.7)"/>
+          </svg>
+        </div>
+        <div class="art-card art-1"><svg style="--base:#d83a43;--stripe:#1c1b1f"><use href="#shirt-h"/></svg></div>
+        <div class="art-card art-2"><svg style="--base:#f4f3ee;--stripe:#134e3a"><use href="#shirt-band"/></svg></div>
+        <div class="art-card art-3"><svg style="--base:#1c2c58;--stripe:#eceae2"><use href="#shirt-v"/></svg></div>
         <span class="art-tag">Ilustração · modelos genéricos</span>
       </figure>
     </div>
@@ -90,9 +111,9 @@
   <!-- FATOS -->
   <section class="facts" aria-label="Resumo">
     <div class="wrap facts-grid">
-      <div class="fact"><span class="fact-big">5 peças</span><span class="fact-label">é o pedido mínimo</span></div>
-      <div class="fact"><span class="fact-big">Você escolhe</span><span class="fact-label">os times e os modelos</span></div>
-      <div class="fact"><span class="fact-big">Tudo no app</span><span class="fact-label">catálogo, pedido e pagamento</span></div>
+      <div class="fact"><span class="fact-icon"><svg class="ic"><use href="#i-box"/></svg></span><div><span class="fact-big">5 peças</span><span class="fact-label">é o pedido mínimo</span></div></div>
+      <div class="fact"><span class="fact-icon"><svg class="ic"><use href="#i-grid"/></svg></span><div><span class="fact-big">Você escolhe</span><span class="fact-label">os times e os modelos</span></div></div>
+      <div class="fact"><span class="fact-icon"><svg class="ic"><use href="#i-card"/></svg></span><div><span class="fact-big">Tudo no app</span><span class="fact-label">catálogo, pedido e pagamento</span></div></div>
     </div>
   </section>
 
@@ -100,6 +121,7 @@
   <section class="how" id="como-funciona">
     <div class="wrap how-grid">
       <div class="how-intro">
+        <p class="eyebrow">Passo a passo</p>
         <h2 class="section-title">Como funciona</h2>
         <p class="section-sub">Quatro passos, do download ao próximo pedido.</p>
       </div>
@@ -116,14 +138,15 @@
   <section class="math" id="a-conta">
     <div class="wrap math-grid">
       <div>
+        <p class="eyebrow">Sem promessa, só a conta</p>
         <h2 class="section-title">A conta que você precisa fazer</h2>
         <p class="section-sub">Não existe lucro fixo por camisa. O que sobra depende do que você paga, do que você cobra, dos seus custos e de quantas peças você realmente vende.</p>
         <div class="formula" role="note">
-          <span>(preço de venda</span>
-          <span>− preço pago no app</span>
-          <span>− frete, embalagem e taxas)</span>
-          <span>× peças vendidas</span>
-          <strong>= diferença antes de impostos</strong>
+          <div class="f-row"><span class="f-op"></span><span>Preço de venda</span></div>
+          <div class="f-row"><span class="f-op">−</span><span>Preço pago no app</span></div>
+          <div class="f-row"><span class="f-op">−</span><span>Frete, embalagem e taxas</span></div>
+          <div class="f-row"><span class="f-op">×</span><span>Peças vendidas</span></div>
+          <div class="f-row f-result"><span class="f-op">=</span><strong>Diferença antes de impostos</strong></div>
         </div>
       </div>
 
@@ -148,7 +171,8 @@
   <!-- PARA QUEM -->
   <section class="fit">
     <div class="wrap">
-      <h2 class="section-title">Antes de começar, seja honesto com você</h2>
+      <p class="eyebrow">Antes de começar</p>
+      <h2 class="section-title">Seja honesto com você</h2>
       <p class="section-sub">Revender dá trabalho. Vale conferir se o modelo combina com a sua rotina.</p>
       <div class="fit-grid">
         <div class="fit-col">
@@ -174,39 +198,41 @@
   <!-- APP -->
   <section class="app">
     <div class="wrap">
+      <p class="eyebrow">No aplicativo</p>
       <h2 class="section-title">O que você encontra no app</h2>
-      <dl class="app-list">
-        <div><dt>Catálogo de camisas</dt><dd>Times e modelos para escolher e montar o pedido.</dd></div>
-        <div><dt>Preço de fornecedor</dt><dd>Compra direto da fonte, sem intermediário no meio.</dd></div>
-        <div><dt>Pedido mínimo baixo</dt><dd>5 peças, sem precisar de capital alto para começar.</dd></div>
-        <div><dt>Ofertas no app</dt><dd>Promoções que aparecem só dentro do aplicativo.</dd></div>
-        <div><dt>Notificação de oferta</dt><dd>Aviso no celular quando entra promoção nova.</dd></div>
-        <div><dt>Pagamento pelo app</dt><dd>Checkout no próprio aplicativo.</dd></div>
-      </dl>
+      <div class="app-list">
+        <div class="app-item"><span class="app-icon"><svg class="ic"><use href="#i-grid"/></svg></span><h3>Catálogo de camisas</h3><p>Times e modelos para escolher e montar o pedido.</p></div>
+        <div class="app-item"><span class="app-icon"><svg class="ic"><use href="#i-tag"/></svg></span><h3>Preço de fornecedor</h3><p>Compra direto da fonte, sem intermediário no meio.</p></div>
+        <div class="app-item"><span class="app-icon"><svg class="ic"><use href="#i-box"/></svg></span><h3>Pedido mínimo baixo</h3><p>5 peças, sem precisar de capital alto para começar.</p></div>
+        <div class="app-item"><span class="app-icon"><svg class="ic"><use href="#i-offer"/></svg></span><h3>Ofertas no app</h3><p>Promoções que aparecem só dentro do aplicativo.</p></div>
+        <div class="app-item"><span class="app-icon"><svg class="ic"><use href="#i-bell"/></svg></span><h3>Notificação de oferta</h3><p>Aviso no celular quando entra promoção nova.</p></div>
+        <div class="app-item"><span class="app-icon"><svg class="ic"><use href="#i-card"/></svg></span><h3>Pagamento pelo app</h3><p>Checkout no próprio aplicativo.</p></div>
+      </div>
     </div>
   </section>
 
   <!-- AVALIAÇÕES -->
   <section class="reviews">
     <div class="wrap">
+      <p class="eyebrow">Avaliações</p>
       <h2 class="section-title">Quem compra, conta</h2>
       <p class="section-sub">Avaliações de clientes publicadas pela ATKFUT.</p>
       <div class="reviews-grid">
         <figure class="review review-lead">
           <blockquote>“Compro com o João e com a ATK há mais de 4 anos, sempre muito top!”</blockquote>
-          <figcaption>Pedro Alves Marques</figcaption>
+          <figcaption><span class="avatar">PA</span>Pedro Alves Marques</figcaption>
         </figure>
         <figure class="review">
           <blockquote>“Amei o aplicativo, facilita muito minhas compras e recebo informações quando tem promoção.”</blockquote>
-          <figcaption>Lella_21</figcaption>
+          <figcaption><span class="avatar">L</span>Lella_21</figcaption>
         </figure>
         <figure class="review">
           <blockquote>“Já comprei mais de 10x e recomendo demais!”</blockquote>
-          <figcaption>Ivan Furtado</figcaption>
+          <figcaption><span class="avatar">IF</span>Ivan Furtado</figcaption>
         </figure>
         <figure class="review">
           <blockquote>“Bom demais, recomendo pra uso próprio ou revenda.”</blockquote>
-          <figcaption>Bruno C.</figcaption>
+          <figcaption><span class="avatar">BC</span>Bruno C.</figcaption>
         </figure>
       </div>
     </div>
@@ -215,31 +241,34 @@
   <!-- FAQ -->
   <section class="faq" id="duvidas">
     <div class="wrap faq-wrap">
-      <h2 class="section-title">Dúvidas frequentes</h2>
-      <details>
-        <summary>Qual é o pedido mínimo?</summary>
-        <p>5 peças por pedido. Dá para misturar times e modelos até chegar nesse total.</p>
-      </details>
-      <details>
-        <summary>Quanto dá para ganhar?</summary>
-        <p>Não existe um valor garantido. Depende do preço que você paga, do preço que você cobra, dos seus custos e de quantas peças você vende. A seção “A conta que você precisa fazer” mostra como calcular.</p>
-      </details>
-      <details>
-        <summary>Preciso de um estoque grande?</summary>
-        <p>Não. Com 5 peças você testa a procura antes de fazer pedidos maiores.</p>
-      </details>
-      <details>
-        <summary>Como faço o pedido e o pagamento?</summary>
-        <p>Pelo app: escolha as peças no catálogo, monte o carrinho e finalize o pagamento no próprio aplicativo.</p>
-      </details>
-      <details>
-        <summary>A ATKFUT tem ligação com clubes ou marcas esportivas?</summary>
-        <p>Não. A ATKFUT não é afiliada, patrocinada nem endossada por clubes, ligas ou marcas esportivas.</p>
-      </details>
-      <details>
-        <summary>Onde baixo o app?</summary>
-        <p>Na <a href="https://apps.apple.com/br/app/atkfut/id6754094628" target="_blank" rel="noopener">App Store</a> (iPhone) e no <a href="https://play.google.com/store/apps/details?id=com.foxappy.atkfut" target="_blank" rel="noopener">Google Play</a> (Android). O download é gratuito.</p>
-      </details>
+      <p class="eyebrow">Dúvidas</p>
+      <h2 class="section-title">Perguntas frequentes</h2>
+      <div class="faq-list">
+        <details>
+          <summary>Qual é o pedido mínimo?</summary>
+          <p>5 peças por pedido. Dá para misturar times e modelos até chegar nesse total.</p>
+        </details>
+        <details>
+          <summary>Quanto dá para ganhar?</summary>
+          <p>Não existe um valor garantido. Depende do preço que você paga, do preço que você cobra, dos seus custos e de quantas peças você vende. A seção “A conta que você precisa fazer” mostra como calcular.</p>
+        </details>
+        <details>
+          <summary>Preciso de um estoque grande?</summary>
+          <p>Não. Com 5 peças você testa a procura antes de fazer pedidos maiores.</p>
+        </details>
+        <details>
+          <summary>Como faço o pedido e o pagamento?</summary>
+          <p>Pelo app: escolha as peças no catálogo, monte o carrinho e finalize o pagamento no próprio aplicativo.</p>
+        </details>
+        <details>
+          <summary>A ATKFUT tem ligação com clubes ou marcas esportivas?</summary>
+          <p>Não. A ATKFUT não é afiliada, patrocinada nem endossada por clubes, ligas ou marcas esportivas.</p>
+        </details>
+        <details>
+          <summary>Onde baixo o app?</summary>
+          <p>Na <a href="https://apps.apple.com/br/app/atkfut/id6754094628" target="_blank" rel="noopener">App Store</a> (iPhone) e no <a href="https://play.google.com/store/apps/details?id=com.foxappy.atkfut" target="_blank" rel="noopener">Google Play</a> (Android). O download é gratuito.</p>
+        </details>
+      </div>
     </div>
   </section>
 
@@ -247,14 +276,24 @@
   <section class="cta-final" id="baixar">
     <div class="wrap">
       <div class="cta-inner">
+        <svg class="cta-pitch" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <g fill="none" stroke="rgba(255,255,255,.09)" stroke-width="2">
+            <line x1="400" y1="0" x2="400" y2="400"/>
+            <circle cx="400" cy="200" r="110"/>
+            <rect x="-2" y="100" width="120" height="200"/>
+            <rect x="682" y="100" width="120" height="200"/>
+          </g>
+        </svg>
         <h2>Veja o catálogo antes de decidir</h2>
         <p>O download é gratuito. Comece com 5 peças quando se sentir seguro.</p>
         <div class="store-buttons store-center">
-          <a class="store-btn store-btn-light" href="https://apps.apple.com/br/app/atkfut/id6754094628" target="_blank" rel="noopener">
-            <span class="store-kicker">Baixar na</span><span class="store-name">App Store</span>
+          <a class="store-btn store-btn-lime" href="https://apps.apple.com/br/app/atkfut/id6754094628" target="_blank" rel="noopener">
+            <svg class="ic" aria-hidden="true"><use href="#i-download"/></svg>
+            <span><span class="store-kicker">Baixar na</span><span class="store-name">App Store</span></span>
           </a>
-          <a class="store-btn store-btn-light" href="https://play.google.com/store/apps/details?id=com.foxappy.atkfut" target="_blank" rel="noopener">
-            <span class="store-kicker">Disponível no</span><span class="store-name">Google Play</span>
+          <a class="store-btn store-btn-onDark" href="https://play.google.com/store/apps/details?id=com.foxappy.atkfut" target="_blank" rel="noopener">
+            <svg class="ic" aria-hidden="true"><use href="#i-download"/></svg>
+            <span><span class="store-kicker">Disponível no</span><span class="store-name">Google Play</span></span>
           </a>
         </div>
       </div>
