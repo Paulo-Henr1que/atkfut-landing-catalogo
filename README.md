@@ -18,6 +18,9 @@ Tudo que a página afirma sobre o app vem do site original ([atkfornecedor.com](
 | Original | Nesta versão | Por quê |
 |---|---|---|
 | "Fornecedor Oficial" | "Catálogo atacadista" | "Oficial" junto a marcas de terceiros agrava a política de bens falsificados / PI |
+| "Direto da fonte, sem intermediário" | "Preço de atacado" | A razão social é "ATKFUT **Intermediações** Ltda." — dizer "sem intermediário" contradiz a própria empresa (Misrepresentation) |
+| "Quanto dá para ganhar?", "lucro", "renda garantida" | "Qual é a margem de revenda?", "margem" | Menos palavras-gatilho de oportunidade de renda, mesmo em frases negativas |
+| Arte do topo sem aviso | "Imagem ilustrativa" | As camisas e telas mostradas não são fotos reais |
 | "Lucre R$80 a R$130 por camisa", "+R$12.000/mês" | Fórmula da conta + exemplo marcado como hipotético, incluindo custos de frete e taxas | Alegação de renda não substanciada (Misrepresentation / Business Opportunity) |
 | "Multiplique o lucro", "mercado sempre quente" | "Repita quando fizer sentido" | Promessa implícita de resultado |
 | — | Seção "Antes de começar" com quem **não** deve entrar | Revisores de oportunidade de negócio valorizam expectativas realistas |
@@ -27,8 +30,15 @@ Tudo que a página afirma sobre o app vem do site original ([atkfornecedor.com](
 
 **Bens falsificados / propriedade intelectual.** Se o catálogo vende réplicas com escudos de clubes e logos de fabricantes sem licença, Google Ads e TikTok Ads podem reprovar ou suspender a conta independentemente do texto da landing page. Não use fotos de produto com marcas de terceiros nos criativos de anúncio. A solução definitiva é produto licenciado.
 
-## Pendências
+## Checklist antes de rodar anúncio
 
-1. Inserir o CNPJ no rodapé (há um `<!-- TODO -->` no `index.html`).
-2. Se for anunciar como oportunidade de negócio no TikTok Ads, verificar se a categoria exige aprovação prévia.
-3. Se adicionar formulário ou pixel de rastreamento, incluir página de política de privacidade.
+**Bloqueia aprovação (resolver antes de subir campanha):**
+1. **Domínio próprio.** Não anuncie com `paulo-henr1que.github.io`: o domínio não bate com a marca anunciada e isso costuma virar reprovação por "Misrepresentation / identidade da empresa pouco clara". Use um domínio ou subdomínio da ATKFUT apontado para o GitHub Pages.
+2. **Dados da empresa e contato visíveis.** Hoje a página só tem a razão social (a mesma que aparece na App Store: ATKFUT INTERMEDIACOES LTDA). Falta CNPJ, e-mail ou WhatsApp de atendimento e, de preferência, endereço. Há um `<!-- TODO -->` no rodapé do `index.html`.
+3. **Política de privacidade.** A App Store aponta para `https://pedidoatacado.com/politicas-de-privacidade/`, mas é uma página da plataforma Pedido Atacado protegida por verificação anti-robô; confirme se ela cita a ATKFUT antes de linkar. Obrigatório se adicionar pixel do Google/TikTok, formulário ou cookies.
+
+**Pode derrubar anúncio ou conta:**
+4. **Criativos e palavras-chave sem marca de terceiro.** Nada de nome de clube, seleção ou fabricante (Nike, Adidas etc.) no texto do anúncio, nas palavras-chave ou nas imagens/vídeos. Fotos de camisa com escudo ou logo são o maior risco de suspensão por bens falsificados.
+5. **Nada de promessa de ganho no anúncio.** A página evita isso; o anúncio precisa seguir a mesma linha (sem "lucre R$X", "renda extra garantida", "ganhe dinheiro").
+6. **Loja do app.** O revisor pode abrir o link da App Store / Google Play. Se as capturas de tela do app mostram escudos e marcas de clubes, o risco de bens falsificados continua, mesmo com a página limpa.
+7. **TikTok Ads:** se o anúncio for posicionado como oportunidade de revenda, verificar se a categoria exige aprovação prévia.
