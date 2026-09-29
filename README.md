@@ -1,6 +1,8 @@
 # ATKFUT — Landing page (versão Catálogo)
 
-Visual claro e editorial, com **exemplo de cálculo passo a passo** (fórmula + tabela com números hipotéticos) em vez de simulador.
+Visual claro com o verde do site original (`#22e06a`) e painéis em verde-escuro (`#04170c`), com **exemplo de cálculo passo a passo** (fórmula + tabela com números hipotéticos) em vez de simulador.
+
+As camisas mostradas são ilustrações SVG genéricas (sem escudo ou marca), para não usar propriedade intelectual de terceiros na página.
 
 - Ao vivo: https://paulo-henr1que.github.io/atkfut-landing-catalogo/
 - Outra variação (escura/app): https://github.com/Paulo-Henr1que/atkfut-landing-ledger

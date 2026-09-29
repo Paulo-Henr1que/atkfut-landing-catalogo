@@ -5,50 +5,84 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ATKFUT — Catálogo de camisas de time no atacado</title>
 <meta name="description" content="Catálogo de camisas de time no atacado pelo app ATKFUT. Pedido mínimo de 5 peças, você escolhe os times e modelos e define seu preço de revenda.">
-<meta name="theme-color" content="#f6f5f0">
+<meta name="theme-color" content="#f3f8f4">
 <meta property="og:title" content="ATKFUT — Catálogo de camisas de time no atacado">
 <meta property="og:description" content="Pedido mínimo de 5 peças. Escolha, compre e pague pelo app.">
 <meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23134e3a'/%3E%3Cpath d='M30 22 L42 18 Q50 26 58 18 L70 22 L86 36 L78 48 L70 44 L70 84 L30 84 L30 44 L22 48 L14 36 Z' fill='%23d4f36a'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%2304170c'/%3E%3Cpath d='M30 22 L42 18 Q50 26 58 18 L70 22 L86 36 L78 48 L70 44 L70 84 L30 84 L30 44 L22 48 L14 36 Z' fill='%2322e06a'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,600;1,9..144,700&family=Inter:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- sprites: camisas genéricas (sem escudo/marca) + ícones -->
+<!-- ===== sprites: camisas genéricas (sem escudo/marca), ícones e logos das lojas ===== -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
-    <clipPath id="shirt-clip"><path d="M30 10 L42 6 Q50 14 58 6 L70 10 L90 26 L81 40 L72 35 L72 92 L28 92 L28 35 L19 40 L10 26 Z"/></clipPath>
-    <symbol id="shirt-h" viewBox="0 0 100 100">
-      <path d="M30 10 L42 6 Q50 14 58 6 L70 10 L90 26 L81 40 L72 35 L72 92 L28 92 L28 35 L19 40 L10 26 Z" style="fill:var(--base);stroke:none"/>
-      <g clip-path="url(#shirt-clip)" style="fill:var(--stripe);stroke:none">
-        <rect x="0" y="30" width="100" height="10"/><rect x="0" y="52" width="100" height="10"/><rect x="0" y="74" width="100" height="10"/>
+    <path id="j-path" d="M46 12 Q60 22 74 12 L92 18 L110 36 L100 54 L88 48 L88 108 Q88 111 85 111 L35 111 Q32 111 32 108 L32 48 L20 54 L10 36 L28 18 Z"/>
+    <clipPath id="j-clip"><use href="#j-path"/></clipPath>
+    <linearGradient id="j-shade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#000" stop-opacity=".32"/>
+      <stop offset=".2" stop-color="#000" stop-opacity=".04"/>
+      <stop offset=".44" stop-color="#fff" stop-opacity=".14"/>
+      <stop offset=".62" stop-color="#fff" stop-opacity=".03"/>
+      <stop offset=".82" stop-color="#000" stop-opacity=".06"/>
+      <stop offset="1" stop-color="#000" stop-opacity=".32"/>
+    </linearGradient>
+    <linearGradient id="j-shade-v" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity=".10"/>
+      <stop offset="1" stop-color="#000" stop-opacity=".22"/>
+    </linearGradient>
+    <g id="j-finish">
+      <g clip-path="url(#j-clip)">
+        <rect width="120" height="120" fill="url(#j-shade)"/>
+        <rect width="120" height="120" fill="url(#j-shade-v)"/>
+        <path d="M110 36 L100 54 M10 36 L20 54" style="fill:none;stroke:var(--c3);stroke-width:7"/>
+        <path d="M34 106 L86 106" style="fill:none;stroke:rgba(0,0,0,.14);stroke-width:1.2"/>
+        <path d="M45 62 Q51 82 47 104 M77 58 Q71 80 75 100" style="fill:none;stroke:rgba(0,0,0,.10);stroke-width:3;stroke-linecap:round"/>
       </g>
-      <path d="M42 6 Q50 14 58 6" style="fill:none;stroke:rgba(0,0,0,.3);stroke-width:2"/>
+      <use href="#j-path" style="fill:none;stroke:rgba(0,0,0,.22);stroke-width:.8"/>
+    </g>
+    <g id="j-crew">
+      <path d="M46 12 Q60 22 74 12 Q60 6 46 12Z" fill="rgba(0,0,0,.4)"/>
+      <path d="M46 12 Q60 22 74 12" style="fill:none;stroke:var(--c3);stroke-width:4.5;stroke-linecap:round"/>
+    </g>
+    <g id="j-vneck">
+      <path d="M47 12 L60 27 L73 12 Q60 6 47 12Z" fill="rgba(0,0,0,.4)"/>
+      <path d="M46 12 L60 28 L74 12" style="fill:none;stroke:var(--c3);stroke-width:4.5;stroke-linecap:round;stroke-linejoin:round"/>
+    </g>
+    <symbol id="j-hoops" viewBox="0 0 120 120">
+      <use href="#j-path" style="fill:var(--c1)"/>
+      <g clip-path="url(#j-clip)" style="fill:var(--c2)"><rect y="40" width="120" height="11"/><rect y="62" width="120" height="11"/><rect y="84" width="120" height="11"/></g>
+      <use href="#j-finish"/><use href="#j-crew"/>
     </symbol>
-    <symbol id="shirt-v" viewBox="0 0 100 100">
-      <path d="M30 10 L42 6 Q50 14 58 6 L70 10 L90 26 L81 40 L72 35 L72 92 L28 92 L28 35 L19 40 L10 26 Z" style="fill:var(--base);stroke:none"/>
-      <g clip-path="url(#shirt-clip)" style="fill:var(--stripe);stroke:none">
-        <rect x="31" y="0" width="7" height="100"/><rect x="46" y="0" width="7" height="100"/><rect x="61" y="0" width="7" height="100"/>
-      </g>
-      <path d="M42 6 Q50 14 58 6" style="fill:none;stroke:rgba(0,0,0,.3);stroke-width:2"/>
+    <symbol id="j-sash" viewBox="0 0 120 120">
+      <use href="#j-path" style="fill:var(--c1)"/>
+      <g clip-path="url(#j-clip)" style="fill:var(--c2)"><polygon points="0,26 120,88 120,106 0,44"/></g>
+      <use href="#j-finish"/><use href="#j-crew"/>
     </symbol>
-    <symbol id="shirt-band" viewBox="0 0 100 100">
-      <path d="M30 10 L42 6 Q50 14 58 6 L70 10 L90 26 L81 40 L72 35 L72 92 L28 92 L28 35 L19 40 L10 26 Z" style="fill:var(--base);stroke:none"/>
-      <g clip-path="url(#shirt-clip)" style="fill:var(--stripe);stroke:none">
-        <polygon points="0,20 100,55 100,68 0,33"/>
-      </g>
-      <path d="M42 6 Q50 14 58 6" style="fill:none;stroke:rgba(0,0,0,.3);stroke-width:2"/>
+    <symbol id="j-stripes" viewBox="0 0 120 120">
+      <use href="#j-path" style="fill:var(--c1)"/>
+      <g clip-path="url(#j-clip)" style="fill:var(--c2)"><rect x="24" width="4" height="120"/><rect x="36" width="4" height="120"/><rect x="48" width="4" height="120"/><rect x="60" width="4" height="120"/><rect x="72" width="4" height="120"/><rect x="84" width="4" height="120"/><rect x="96" width="4" height="120"/></g>
+      <use href="#j-finish"/><use href="#j-vneck"/>
     </symbol>
+
+    <symbol id="logo-apple" viewBox="0 0 24 24"><path fill="currentColor" d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></symbol>
+    <symbol id="logo-play" viewBox="0 0 24 24">
+      <path fill="#00c3ff" d="M1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924z"/>
+      <path fill="#00e676" d="M13.544 10.989l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973z"/>
+      <path fill="#ffce00" d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594z"/>
+      <path fill="#ff3a44" d="M13.544 13.056l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/>
+    </symbol>
+
     <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></symbol>
     <symbol id="i-tag" viewBox="0 0 24 24"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8Z"/><circle cx="7.5" cy="7.5" r="1.5"/></symbol>
     <symbol id="i-box" viewBox="0 0 24 24"><path d="M21 8 12 3 3 8v8l9 5 9-5V8Z"/><path d="M3 8l9 5 9-5M12 13v8"/></symbol>
     <symbol id="i-offer" viewBox="0 0 24 24"><path d="M19 5 5 19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></symbol>
     <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></symbol>
     <symbol id="i-card" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/></symbol>
-    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
   </defs>
 </svg>
 
@@ -56,7 +90,7 @@
 
 <header class="topbar">
   <div class="wrap topbar-inner">
-    <a href="#" class="brand" aria-label="ATKFUT, início">ATKFUT</a>
+    <a href="#" class="brand" aria-label="ATKFUT, início">ATK<span>FUT</span></a>
     <nav class="nav-links" aria-label="Seções">
       <a href="#como-funciona">Como funciona</a>
       <a href="#a-conta">A conta</a>
@@ -72,17 +106,17 @@
   <section class="hero">
     <div class="wrap hero-grid">
       <div class="hero-copy">
-        <p class="eyebrow">Catálogo atacadista · app ATKFUT</p>
+        <p class="eyebrow"><span class="eyebrow-dot"></span>Catálogo atacadista · app ATKFUT</p>
         <h1>Monte seu estoque de camisas com <mark>5&nbsp;peças</mark>, não com um lote fechado.</h1>
         <p class="lead">No app ATKFUT você escolhe os times e modelos, compra direto do fornecedor e paga pelo celular. Depois é com você: revende no seu canal, pelo preço que definir.</p>
         <div class="store-buttons">
-          <a class="store-btn" href="https://apps.apple.com/br/app/atkfut/id6754094628" target="_blank" rel="noopener">
-            <svg class="ic" aria-hidden="true"><use href="#i-download"/></svg>
-            <span><span class="store-kicker">Baixar na</span><span class="store-name">App Store</span></span>
+          <a class="store-badge" href="https://apps.apple.com/br/app/atkfut/id6754094628" target="_blank" rel="noopener">
+            <svg class="sb-logo sb-apple" aria-hidden="true"><use href="#logo-apple"/></svg>
+            <span><span class="sb-kicker">Baixar na</span><span class="sb-name">App Store</span></span>
           </a>
-          <a class="store-btn store-btn-ghost" href="https://play.google.com/store/apps/details?id=com.foxappy.atkfut" target="_blank" rel="noopener">
-            <svg class="ic" aria-hidden="true"><use href="#i-download"/></svg>
-            <span><span class="store-kicker">Disponível no</span><span class="store-name">Google Play</span></span>
+          <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.foxappy.atkfut" target="_blank" rel="noopener">
+            <svg class="sb-logo" aria-hidden="true"><use href="#logo-play"/></svg>
+            <span><span class="sb-kicker">Disponível no</span><span class="sb-name">Google Play</span></span>
           </a>
         </div>
       </div>
@@ -90,7 +124,7 @@
       <figure class="hero-art" aria-hidden="true">
         <div class="art-pitch">
           <svg viewBox="0 0 400 360" preserveAspectRatio="none">
-            <g fill="none" stroke="rgba(255,255,255,.55)" stroke-width="2">
+            <g fill="none" stroke="rgba(255,255,255,.5)" stroke-width="2">
               <rect x="16" y="16" width="368" height="328" rx="6"/>
               <line x1="16" y1="180" x2="384" y2="180"/>
               <circle cx="200" cy="180" r="48"/>
@@ -100,10 +134,11 @@
             <circle cx="200" cy="180" r="3.5" fill="rgba(255,255,255,.7)"/>
           </svg>
         </div>
-        <div class="art-card art-1"><svg style="--base:#d83a43;--stripe:#1c1b1f"><use href="#shirt-h"/></svg></div>
-        <div class="art-card art-2"><svg style="--base:#f4f3ee;--stripe:#134e3a"><use href="#shirt-band"/></svg></div>
-        <div class="art-card art-3"><svg style="--base:#1c2c58;--stripe:#eceae2"><use href="#shirt-v"/></svg></div>
-        <span class="art-tag">Ilustração · modelos genéricos</span>
+        <div class="art-card art-1"><div class="shot"><svg style="--c1:#1b2f6b;--c2:#6cc4ff;--c3:#0e1b40"><use href="#j-hoops"/></svg></div><span class="art-name">Listrada Marinho</span></div>
+        <div class="art-card art-2"><div class="shot"><svg style="--c1:#f4f4f0;--c2:#ff7a1a;--c3:#ff7a1a"><use href="#j-sash"/></svg></div><span class="art-name">Faixa Laranja</span></div>
+        <div class="art-card art-3"><div class="shot"><span class="shot-tag">Oferta</span><svg style="--c1:#15181c;--c2:#d6b25a;--c3:#d6b25a"><use href="#j-stripes"/></svg></div><span class="art-name">Retrô Dourada</span></div>
+        <div class="art-chip chip-notif"><span class="chip-icon"><svg class="ic"><use href="#i-bell"/></svg></span>Oferta nova no catálogo</div>
+        <div class="art-chip chip-min"><span class="chip-check"><svg class="ic"><use href="#i-check"/></svg></span>5 de 5 peças · mínimo atingido</div>
       </figure>
     </div>
   </section>
@@ -277,7 +312,7 @@
     <div class="wrap">
       <div class="cta-inner">
         <svg class="cta-pitch" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-          <g fill="none" stroke="rgba(255,255,255,.09)" stroke-width="2">
+          <g fill="none" stroke="rgba(34,224,106,.16)" stroke-width="2">
             <line x1="400" y1="0" x2="400" y2="400"/>
             <circle cx="400" cy="200" r="110"/>
             <rect x="-2" y="100" width="120" height="200"/>
@@ -287,13 +322,13 @@
         <h2>Veja o catálogo antes de decidir</h2>
         <p>O download é gratuito. Comece com 5 peças quando se sentir seguro.</p>
         <div class="store-buttons store-center">
-          <a class="store-btn store-btn-lime" href="https://apps.apple.com/br/app/atkfut/id6754094628" target="_blank" rel="noopener">
-            <svg class="ic" aria-hidden="true"><use href="#i-download"/></svg>
-            <span><span class="store-kicker">Baixar na</span><span class="store-name">App Store</span></span>
+          <a class="store-badge" href="https://apps.apple.com/br/app/atkfut/id6754094628" target="_blank" rel="noopener">
+            <svg class="sb-logo sb-apple" aria-hidden="true"><use href="#logo-apple"/></svg>
+            <span><span class="sb-kicker">Baixar na</span><span class="sb-name">App Store</span></span>
           </a>
-          <a class="store-btn store-btn-onDark" href="https://play.google.com/store/apps/details?id=com.foxappy.atkfut" target="_blank" rel="noopener">
-            <svg class="ic" aria-hidden="true"><use href="#i-download"/></svg>
-            <span><span class="store-kicker">Disponível no</span><span class="store-name">Google Play</span></span>
+          <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.foxappy.atkfut" target="_blank" rel="noopener">
+            <svg class="sb-logo" aria-hidden="true"><use href="#logo-play"/></svg>
+            <span><span class="sb-kicker">Disponível no</span><span class="sb-name">Google Play</span></span>
           </a>
         </div>
       </div>
@@ -304,11 +339,11 @@
 <footer>
   <div class="wrap footer-grid">
     <div>
-      <div class="brand">ATKFUT</div>
+      <div class="brand">ATK<span>FUT</span></div>
       <p class="fine-print">ATKFUT Intermediações Ltda.<!-- TODO: inserir CNPJ aqui --></p>
       <p class="fine-print">© 2026 ATKFUT · Todos os direitos reservados</p>
     </div>
-    <p class="disclaimer">Este site não é afiliado, patrocinado ou endossado por nenhuma marca esportiva, liga ou clube. As ilustrações de camisas são genéricas. Os valores do exemplo de cálculo são hipotéticos e não constituem promessa, garantia ou estimativa de resultado. O resultado de cada revendedor varia conforme preço de compra e de venda, custos, volume vendido e outros fatores fora do controle da ATKFUT.</p>
+    <p class="disclaimer">Este site não é afiliado, patrocinado ou endossado por nenhuma marca esportiva, liga ou clube. As camisas mostradas são ilustrações genéricas. Os valores do exemplo de cálculo são hipotéticos e não constituem promessa, garantia ou estimativa de resultado. O resultado de cada revendedor varia conforme preço de compra e de venda, custos, volume vendido e outros fatores fora do controle da ATKFUT.</p>
   </div>
 </footer>
 
