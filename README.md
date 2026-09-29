@@ -1,32 +1,32 @@
 # ATKFUT — Landing page (versão Catálogo)
 
-Variação de landing page inspirada em [atkfornecedor.com](https://atkfornecedor.com/), com visual claro estilo editorial/catálogo e tabela de exemplo em vez de simulador.
+Visual claro e editorial, com **exemplo de cálculo passo a passo** (fórmula + tabela com números hipotéticos) em vez de simulador.
 
-Site estático (`index.html` + `style.css`), sem dependências de build.
+- Ao vivo: https://paulo-henr1que.github.io/atkfut-landing-catalogo/
+- Outra variação (escura/app): https://github.com/Paulo-Henr1que/atkfut-landing-ledger
 
-## Análise de conformidade (resumo)
+Site estático (`index.html` + `style.css`), sem build.
 
-**🔴 Crítico — Bens falsificados / propriedade intelectual.**
-O site original vende réplicas de camisas de clubes usando marcas de terceiros (Nike, Adidas, Umbro, escudos de clubes) e se descreve como "Fornecedor Oficial". Isso se enquadra na política de **Counterfeit Goods** do Google Ads e na de **Propriedade Intelectual / Bens Falsificados** do TikTok Ads — ambas proíbem anúncios de réplicas não licenciadas de marcas registradas, independentemente do texto usado na página. **Nenhuma mudança de copy resolve isso.** A correção real exige produtos licenciados ou remoção de marcas/escudos de terceiros da comunicação e do material de anúncio.
+## Base de conteúdo
 
-**🟠 Alto — Promessas de ganho financeiro não substanciadas.**
-Frases como "Lucre R$80 a R$130 por camisa" e valores fixos de lucro mensal caracterizam alegação de renda de oportunidade de negócio, restrita pelo Google Ads (*Misrepresentation*) e sujeita a aprovação prévia no TikTok Ads (*Business Opportunity*). Nesta versão os números viraram uma **tabela de exemplo ilustrativo**, com aviso de que não é garantia.
+Tudo que a página afirma sobre o app vem do site original ([atkfornecedor.com](https://atkfornecedor.com/)): pedido mínimo de 5 peças, escolha de times e modelos, catálogo, preço de fornecedor, ofertas e notificações no app, pagamento pelo app, links oficiais da App Store e do Google Play e as 4 avaliações de clientes publicadas lá. Nenhum recurso, número ou depoimento foi inventado.
 
-**🟡 Médio — Linguagem de urgência/escassez sem verificação**, removida/suavizada.
+## Decisões de conformidade (Google Ads / TikTok Ads)
 
-## O que foi ajustado em relação ao site original
+| Original | Nesta versão | Por quê |
+|---|---|---|
+| "Fornecedor Oficial" | "Catálogo atacadista" | "Oficial" junto a marcas de terceiros agrava a política de bens falsificados / PI |
+| "Lucre R$80 a R$130 por camisa", "+R$12.000/mês" | Fórmula da conta + exemplo marcado como hipotético, incluindo custos de frete e taxas | Alegação de renda não substanciada (Misrepresentation / Business Opportunity) |
+| "Multiplique o lucro", "mercado sempre quente" | "Repita quando fizer sentido" | Promessa implícita de resultado |
+| — | Seção "Antes de começar" com quem **não** deve entrar | Revisores de oportunidade de negócio valorizam expectativas realistas |
+| — | Ilustrações de camisa genéricas, sem escudo nem marca, identificadas como ilustração | Evitar uso de marca de terceiros na página |
 
-- Sem "fornecedor oficial" — trocado por "fornecedor atacadista".
-- Sem valor de lucro fixo — vira tabela de exemplo com aviso.
-- Sem marca de clube/fabricante na página.
-- Bloco de aviso legal visível na página (não só no rodapé).
-- Disclaimer completo no rodapé sobre não afiliação e variação de resultados.
+## Risco que continua fora do alcance da página
 
-## Pendências antes de publicar/anunciar de verdade
+**Bens falsificados / propriedade intelectual.** Se o catálogo vende réplicas com escudos de clubes e logos de fabricantes sem licença, Google Ads e TikTok Ads podem reprovar ou suspender a conta independentemente do texto da landing page. Não use fotos de produto com marcas de terceiros nos criativos de anúncio. A solução definitiva é produto licenciado.
 
-1. Substituir o CNPJ placeholder pelo CNPJ real.
-2. Decidir o que fazer quanto às imagens de produto (réplicas com marca de terceiros) antes de rodar tráfego pago — maior risco de suspensão de conta.
-3. Verificar aprovação prévia de categoria se for anunciar como "oportunidade de negócio".
-4. Revisar com jurídico/contador antes de publicar valores financeiros, mesmo como exemplo.
+## Pendências
 
-Outra variação (visual escuro/painel): [atkfut-landing-ledger](https://github.com/Paulo-Henr1que/atkfut-landing-ledger)
+1. Inserir o CNPJ no rodapé (há um `<!-- TODO -->` no `index.html`).
+2. Se for anunciar como oportunidade de negócio no TikTok Ads, verificar se a categoria exige aprovação prévia.
+3. Se adicionar formulário ou pixel de rastreamento, incluir página de política de privacidade.
